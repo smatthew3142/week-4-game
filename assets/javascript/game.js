@@ -11,15 +11,19 @@ $(document).ready(function(){
 	var message = {
 		win: "YOU WIN!",
 		lose: "You collected too many crystals! GAME OVER!",
+		reset:""
 	}
-	var redNumber;
+	var redNumber= Math.floor(Math.random() * 11) + 1;
 	var blueNumber;
 	var purpleNumber;
 	var greenNumber;
+	var newWinner = true;
 
 
 
 	//start a new game
+
+	newGame();
 
 	function newGame(){
 
@@ -28,43 +32,83 @@ $(document).ready(function(){
 		$('#randomNumber').text(newNumber);
 
 		//set random numbers for crystals
-		var redNumber= Math.floor(Math.random() * 11) + 1;
+		redNumber= Math.floor(Math.random() * 11) + 1;
 		console.log('Red Number: ' + redNumber);
 
-		var blueNumber= Math.floor(Math.random() * 11) + 1;
+		blueNumber= Math.floor(Math.random() * 11) + 1;
 		console.log('Blue Number: ' + blueNumber);
 
-		var purpleNumber= Math.floor(Math.random() * 11) + 1;
+		purpleNumber= Math.floor(Math.random() * 11) + 1;
 		console.log('Purple Number: ' + purpleNumber);
 
-		var greenNumber= Math.floor(Math.random() * 11) + 1;
+		greenNumber= Math.floor(Math.random() * 11) + 1;
 		console.log('Green Number: ' + greenNumber);
 
+		yourTotal = 0;
 		$('#yourTotal').text(yourTotal);
-		
+		console.log("score: " + yourTotal);
+
+		// $('#message').html(message.reset);
+
+	
 		$('#winCount').text(winCount);
 		$('#lossCount').text(lossCount);
 
 	}
 
-	newGame();
 
 
 	//click crystals
-
-
 	//check for winner
+
+		$('#red').on('click', function() {
+		yourTotal = yourTotal + redNumber;
+		console.log("new score: " + yourTotal);
+		$('#yourTotal').text(yourTotal);
+		
+
+		if (yourTotal == newNumber) {
+			winner();
+
+		}		
+		else if (yourTotal > newNumber) {
+			loser();
+		}
+	});
+
+
 
 
 	//if win, add to win count
 
+		function winner() {
+		winCount++;
+		$('#winCount').text(winCount);
+		$('#message').html(message.win);
+
+		newGame();	
+		
+	}
+
 
 	//if loss, add to loss count
 
+		function loser() {
+		lossCount++;
+		$('#lossCount').text(lossCount);
+		$('#message').html(message.lose);
+
+		newGame();
+		
+		
+	}
+
+});
 
 
 
 
 
 
-})
+
+
