@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset = "UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Crystal Collector</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.js"
+	integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Vollkorn+SC" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div class= "container">
+
+		<div class= "jumbotron">
+    		<h1 class= "text-center">Crystal Collector</h1>
+    		<h3 class="text-center">Add the crystals together to match a random number!</h3>
+  		</div>
+
+  		<div class= "row">
+  			<div class= "col-xs-6">
+  				<div class= "panel panel-default">
+  					<h2 class= "panel-title">Match this number!</h2>
+            <div class="panel-body">
+              <div class= "text-center">
+  					
+                <div class= "matchThisNum">
+      						<h3>
+      							<span id= "randomNumber"></span>
+      						</h3>
+      					</div>
+              </div>
+            </div>
+  				</div>
+  			</div>
+
+  			<div class= "col-xs-6">
+  				<div class= "panel panel-default">
+  					<h2 class= "panel-title">Collect Crystals</h2>
+            <div class="panel-body">
+              <div class= "text-center">
+            
+      					<div class= "crystalGems">
+    						  <img id= "red" src="./assets/images/red.jpg" alt= "ruby">
+    						  <img id= "blue" src="./assets/images/blue.jpg" alt= "sapphire">
+
+                <br>
+                
+    						  <img id= "purple" src="./assets/images/purple.jpg" alt= "amethyst">
+    						  <img id= "green" src="./assets/images/green.jpg" alt= "emerald">
+                </div>
+                
+    					</div>
+            </div>
+  				</div>
+  			</div>
+  		</div>
+
+  		<div class= "row">
+  			<div class= "col-xs-6">
+  				<div class= "panel panel-default">
+  					<h2 class= "panel-title">Your Total</h2>
+            <div class="panel-body">
+              <div class= "text-center">
+
+      					<div class= "userTotal">
+      						<h3>
+      						<span id= "yourTotal"></span>
+      						<span id="message"></span>
+      						</h3>
+      					</div>
+
+              </div>
+            </div>
+  				</div>
+  			</div>
+
+  			<div class= "col-xs-6">
+  				<div class= "panel panel-default">
+  					<h2 class= "panel-title">Score</h2>
+            <div class="panel-body">
+              <div class= "text-center">
+
+      					<div class= "winLose">
+      						<h3> Wins: </h3>
+      						<span id= "winCount"></span>
+      						<br>
+      						<h3> Losses: </h3>
+      						<span id= "lossCount"></span>
+      					</div>
+
+              </div>
+            </div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  	<script src="assets/javascript/game.js"></script>
+
+</body>
+</html>

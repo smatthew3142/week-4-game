@@ -1,0 +1,40 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../images/regal.png");
+  font-family: 'Raleway', 'Arial', Helvetica, sans-serif;
+  color: #777777;
+}
+
+h1, h2, h3 {
+  font-family: 'Vollkorn SC', Times, Times New Roman, serif;
+}
+
+.jumbotron{
+	margin: 25px;
+	font-family: 'Vollkorn SC', Times, Times New Roman, serif;
+}
+
+.panel {
+	font-family: 'Vollkorn SC', Times, Times New Roman, serif;
+	padding: 10px;
+}
+
+.panel h2 {
+	font-size: 24px;
+}
+
+.panel h3 {
+	font-size: 18px;
+}
+
+.panel img {
+	width: 35%;
+	margin: 5px;
+	box-shadow: 3px 3px 10px #999999;
+}
