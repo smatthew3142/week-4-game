@@ -10,7 +10,7 @@ $(document).ready(function(){
 	var lossCount = 0;
 	var message = {
 		win: "YOU WIN!",
-		lose: "You collected too many crystals! GAME OVER!",
+		lose: "You collected too many crystals! Try again!",
 		reset:""
 	}
 	var redNumber= Math.floor(Math.random() * 11) + 1;
@@ -56,13 +56,56 @@ $(document).ready(function(){
 
 	}
 
-
-
 	//click crystals
 	//check for winner
 
 		$('#red').on('click', function() {
 		yourTotal = yourTotal + redNumber;
+		console.log("new score: " + yourTotal);
+		$('#yourTotal').text(yourTotal);
+		
+
+		if (yourTotal == newNumber) {
+			winner();
+
+		}		
+		else if (yourTotal > newNumber) {
+			loser();
+		}
+	});
+
+		$('#blue').on('click', function() {
+		yourTotal = yourTotal + blueNumber;
+		console.log("new score: " + yourTotal);
+		$('#yourTotal').text(yourTotal);
+		
+
+		if (yourTotal == newNumber) {
+			winner();
+
+		}		
+		else if (yourTotal > newNumber) {
+			loser();
+		}
+	});
+
+		$('#purple').on('click', function() {
+		yourTotal = yourTotal + purpleNumber;
+		console.log("new score: " + yourTotal);
+		$('#yourTotal').text(yourTotal);
+		
+
+		if (yourTotal == newNumber) {
+			winner();
+
+		}		
+		else if (yourTotal > newNumber) {
+			loser();
+		}
+	});
+
+		$('#green').on('click', function() {
+		yourTotal = yourTotal + greenNumber;
 		console.log("new score: " + yourTotal);
 		$('#yourTotal').text(yourTotal);
 		
